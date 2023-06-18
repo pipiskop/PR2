@@ -1,0 +1,30 @@
+﻿<Window x:Class="PR2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PR2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="#FF333131">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="42*"/>
+            <RowDefinition Height="349*"/>
+            <RowDefinition Height="43*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="354*"/>
+            <ColumnDefinition Width="241*"/>
+            <ColumnDefinition Width="205*"/>
+        </Grid.ColumnDefinitions>
+        <DatePicker x:Name="Data" Margin="10,10,10,5" Grid.ColumnSpan="3" FirstDayOfWeek="Monday" SelectedDateFormat="Short" Background="#FF7D7D7D" Foreground="Black" FontWeight="Bold"/>
+        <ListBox x:Name="Page" Margin="10,3,0,10" Grid.Row="1" SelectionChanged="Chenge" Background="#FF7D7D7D" Foreground="White" />
+        <TextBlock Grid.Column="1" Margin="97,74,128,0" Grid.Row="1" TextWrapping="Wrap" Text="Название" VerticalAlignment="Top" TextAlignment="Center" Height="18" FontSize="16" Grid.ColumnSpan="2" Foreground="White"/>
+        <TextBox x:Name="Naming" Grid.Column="1" Margin="65,100,95,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="18" Grid.ColumnSpan="2"/>
+        <TextBlock Grid.Column="1" Margin="98,131,128,0" Grid.Row="1" TextWrapping="Wrap" Text="Описание" VerticalAlignment="Top" TextAlignment="Center" Height="20" FontSize="16" Grid.ColumnSpan="2" Foreground="White"/>
+        <TextBox x:Name="Description" Grid.Column="1" Margin="65,157,95,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="18" Grid.ColumnSpan="2"/>
+        <Button Grid.Column="0" Content="Удалить запись" Margin="10,13,0,0" Grid.Row="2" Height="20" VerticalAlignment="Top" Click="Delete" Background="#FF7D7D7D" Foreground="White"/>
+        <Button Grid.Column="1" Content="Создать" Grid.Row="2" Margin="4,13,6,0" Height="20" VerticalAlignment="Top" Click="Create" Background="#FF7D7D7D" Foreground="White"/>
+        <Button Grid.Column="2" Content="Сохранить" Grid.Row="2" Margin="0,13,0,0" Height="20" VerticalAlignment="Top" Click="Save" Background="#FF7D7D7D" Foreground="White"/>
+    </Grid>
+</Window>
